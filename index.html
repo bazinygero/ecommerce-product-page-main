@@ -2,43 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+	<header>
+        <div class="container">
+            <div class="header-left">
+            
+                <button class="nav-open-btn"><img
+                        src="./images/icon-menu.svg" alt="menu-icon" width="16" height="16"></button>
+                <div class="logo"><img src="./images/logo.svg" alt="sneakers logo" width="140" height="20"></div>
+                
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><button class="nav-close-btn">&times;</button></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <button class="cart-btn"><svg width="20" height="20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                            fill="#69707D" fill-rule="nonzero" /></svg>
+                    <span class="cart-quantity-badge"></span>
+                </button>
+                <a class="profile-link" href="#"><img class="profile-img"
+                        src="./images/image-avatar.png" alt="" width="24" height="24"></a>
+                
+                <div class="cart">
+                    <h3>Cart</h3>
+                    <div class="cart-content">
+                        <p>Your cart is empty</p>
+                    </div>
+                    <button class="button checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    </header>
+    <main>
+        <div class="container-main">
+            
+            <div class="lightbox">
+                <div class="lightbox-main">
+                    <button class="arrow-left"><img src="./images/icon-previous.svg" alt="left arrow" width="18"
+                            height="18"></button>
+                    <a href="#"><img class="product-image-main" src="./images/image-product-1.jpg"
+                            alt="product image" width="300" height="300"></a>
+                    <button class="arrow-right"><img src="./images/icon-next.svg" alt="right arrow" width="18"
+                            height="18"></button>
+                </div>
+                <div class="lightbox-thumbnails">
+                    <a href="#"><img class="active" src="./images/image-product-1-thumbnail.jpg"
+                            alt="product image"></a>
+                    <a href="#"><img src="./images/image-product-2-thumbnail.jpg" alt="product image"></a>
+                    <a href="#"><img src="./images/image-product-3-thumbnail.jpg" alt="product image"></a>
+                    <a href="#"><img src="./images/image-product-4-thumbnail.jpg" alt="product image"></a>
+                </div>
+            </div>
+            <div class="container">
+                
+                <div class="product-info">
+                    <div><span class="title">Sneaker company</span></div>
+                    <h1>Fall Limited Edition Sneakers</h1>
+                    <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+                        durable rubber outer sole, they’ll withstand everything the weather can offer.
+                    </p>
+                    <div class="price-wrapper">
+                        <div class="price">
+                            <span>$125.00</span><span class="discount">50%</span>
+                        </div>
+                        <div class="old-price"><span aria-label="old price">$250.00</span></div>
+                    </div>
+                    <div class="add-to-cart-wrapper">
+                        <div class="quantity-selector">
+                            <button class="minus"><img class="minus"
+                                    src="./images/icon-minus.svg" alt="minus icon"></button>
+                            <span class="number">1</span>
+                            <button class="plus"><img class="plus"
+                                    src="./images/icon-plus.svg" alt="plus icon"></button>
+                        </div>
+                        <button class="button | add-to-cart-btn"><svg width="22" height="20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero" /></svg>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+	<footer>
+		<div class="attribution">
+			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+			Coded by <a href="https://github.com/bazinygero">Ivan Zbyrnia</a>.
+		  </div>
+	</footer>
+    <script src="./dist/script.js"></script>
 </body>
 </html>
