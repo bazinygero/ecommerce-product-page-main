@@ -1,0 +1,86 @@
+@use '../util' as *;
+
+header {
+    max-width: calc(1110px + 2rem);
+    margin: auto;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-right {
+    gap: 1.5rem;
+    position: relative;
+}
+
+.logo {
+    display: block;
+    position: relative;
+    bottom: 1px;
+}
+
+.desktop-nav ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 2.5rem;
+    column-gap: 2rem;
+    display: none;
+}
+
+.desktop-nav a {
+    display: block;
+    padding: 3rem 0;
+    max-height: 114px;
+    transition: all .1s;
+    color: var(--dark-grayish-blue);
+}
+
+.desktop-nav a:hover  {
+    border-bottom: 3px solid var(--orange);
+}
+
+.cart-btn {
+    position: relative;
+}
+.cart-btn:hover path {
+    fill: var(--black);
+}
+
+.cart-quantity-badge {
+    position: absolute;
+    top: -7px;
+    right: -10px;
+    display: block;
+    padding: .125rem .5rem;
+    font-size: .625rem;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--dark-grayish-blue);
+    border-radius: 8px;    
+    display: none;
+}
+
+.profile-img {
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 2px solid var(--white);
+    border-radius: 100%;
+    transition: all .2s;
+}
+
+.profile-img:hover  {
+    border: 2px solid var(--orange);
+}

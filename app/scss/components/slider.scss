@@ -1,0 +1,31 @@
+@use '../util' as *;
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    min-height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-black-transparent);
+    display: none;
+}
+
+.arrow-left-popup {
+    left: -20px;
+    top: calc(50% - 80px);
+}
+
+.arrow-right-popup {
+    right: -20px;
+    top: calc(50% - 80px);
+}
+
+.lightbox-close-btn {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    font-size: 2rem;
+    color: #FFF;
+}

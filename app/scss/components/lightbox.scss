@@ -1,0 +1,73 @@
+@use '../util' as *;
+
+.lightbox {
+    max-width: 40em;
+    margin: auto;
+    position: relative;
+}
+
+.lightbox-main {
+    height: 80vw;
+    max-height: 640px;
+    position: relative;
+}
+
+.product-image-main {
+    height: 80vw;
+    max-height: 640px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.arrow-left img,
+.arrow-right img,
+.arrow-left-popup img,
+.arrow-right-popup img {
+    padding-inline: 3px;
+}
+
+.arrow-left,
+.arrow-left-popup,
+.arrow-right,
+.arrow-right-popup {
+    background-color: var(--white);
+    padding: .7rem;
+    border-radius: 100%;
+    position: absolute;
+    top: calc(50% - 20px);
+}
+
+.arrow-left {
+    left: 1rem;
+}
+
+.arrow-right {
+    right: 1rem;
+}
+
+.lightbox-thumbnails {
+    display: none;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.lightbox-thumbnails img {
+    width: 90px;
+    border-radius: 12px;
+    transition: all .2s;
+}
+
+.lightbox-thumbnails a {
+    background-color: var(--white);
+    border-radius: 12px;
+}
+
+.lightbox-thumbnails .active {
+    border: 2px solid var(--orange);
+    opacity: .5;
+}
+
+.lightbox-thumbnails a:hover img {
+    opacity: .4;
+}

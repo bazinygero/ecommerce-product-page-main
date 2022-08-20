@@ -1,0 +1,17 @@
+@use '../util' as *;
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    width: 100%;
+    color: var(--white);
+    background-color: var(--orange);
+    transition: all .2s;
+}
+.button:hover,
+.button:focus-visible {
+    opacity: .7;
+}
