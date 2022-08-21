@@ -50,22 +50,22 @@
     justify-content: space-between;
     gap: 2rem;
     margin-top: 2rem;
-}
 
-.lightbox-thumbnails img {
-    width: 90px;
-    border-radius: 12px;
-    transition: all .2s;
-}
+    img {
+        width: 90px;
+        border-radius: 12px;
+        transition: all .2s;
+    }
 
-.lightbox-thumbnails a {
-    background-color: var(--white);
-    border-radius: 12px;
-}
+    a {
+        background-color: var(--white);
+        border-radius: 12px;
+    }
 
-.lightbox-thumbnails .active {
-    border: 2px solid var(--orange);
-    opacity: .5;
+    .active {
+        border: 2px solid var(--orange);
+        opacity: .5;
+    }
 }
 
 .lightbox-thumbnails a:hover img {

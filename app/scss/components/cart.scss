@@ -14,11 +14,6 @@
     display: none;
 }
 
-.cart h3 {
-    padding: 1.5rem;
-    border-bottom: 1px solid var(--grayish-blue);
-}
-
 .cart-content {
     display: flex;
     justify-content: space-between;
@@ -41,22 +36,4 @@
     font-size: 1.125rem;
     margin-right: .35rem;
     color: var(--dark-grayish-blue);
-}
-
-.cart-content .cart-total {
-    font-weight: 700;
-    color: var(--black);
-}
-
-.cart-content p {
-    margin: 3rem auto;
-    color: var(--dark-grayish-blue);
-}
-
-.checkout-btn {
-    width: calc(100% - 3rem);
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    display: none;
 }

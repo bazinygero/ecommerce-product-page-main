@@ -1,0 +1,31 @@
+@use '../util' as *;
+
+.mobile-nav { 
+    ul {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 99;
+        padding: 0;
+        padding-top: 1.5rem;
+        padding-right: 8rem;
+        background-color: #FFF;
+        box-shadow: 0 10px 500px 500px hsla(0, 0%, 0%, 0.75);
+    }
+
+    a {
+        padding: 1rem 1.5rem;
+        font-weight: 700;
+        color: #000;
+    }
+    
+}
+
+.mobile-nav a:hover,
+.mobile-nav a:active,
+.mobile-nav a:focus-visible {
+    border: none;
+    color: var(--dark-grayish-blue);
+}

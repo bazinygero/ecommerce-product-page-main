@@ -1,3 +1,50 @@
 @use '../util' as *;
 
+h3 {
+    margin: 0;
+    font-size: 1rem;
+}
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+//Cart section typography 
+.cart {
+    h3 {
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--grayish-blue);
+    }
+}
+
+.cart-content {
+    .cart-total {
+        font-weight: 700;
+        color: var(--black);
+    }   
+}
+
+.cart-content {
+    p {
+        margin: 3rem auto;
+        color: var(--dark-grayish-blue);
+    }
+}
+
+.info {
+    max-width: 40em;
+    margin: auto;
+    
+    p {
+        line-height: 1.5;
+        color: var(--dark-grayish-blue);
+    }
+}
+
+.title {
+    font-size: .875rem;
+    letter-spacing: 2px;
+    color: var(--orange);
+    text-transform: uppercase;
+}
