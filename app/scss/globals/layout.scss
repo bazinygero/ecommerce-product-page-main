@@ -20,7 +20,7 @@ img {
     margin: auto;
 }
 
-@media all and (min-width: 960px) {
+@media screen and (min-width: 960px) {
     
     header {
         padding: 0 1rem;
@@ -66,11 +66,11 @@ img {
     }
 
     .lightbox-main {
-        max-height: 28rem;
+        max-height: 28rem !important;
     }
 
     .product-image-main {
-        max-height: 28rem;
+        max-height: 28rem !important;
         border-radius: 16px;
     }
 
@@ -80,21 +80,21 @@ img {
     }
 
     .lightbox-thumbnails {
-        display: flex;
+        display: flex !important;
     }
 
     .price-wrapper {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-start !important;
         gap: 1rem;
     }
 
     .add-to-cart-wrapper {
-        grid-template-columns: minmax(160px, 1fr) 2fr;
+        grid-template-columns: minmax(160px, 1fr) 2fr !important;
         margin-bottom: 0;
     }
 
     .overlay {
-        display: flex;
+        display: flex !important;
     }
 } 

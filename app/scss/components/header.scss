@@ -31,7 +31,7 @@ header {
     bottom: 1px;
 }
 
-.desktop-nav {
+nav {
     ul {
         margin: 0;
         padding: 0;
@@ -70,11 +70,8 @@ header {
 }
 
 .profile-img {
-    height: 1.5rem;
-    width: 1.5rem;
     border: 2px solid var(--white);
     border-radius: 100%;
-    transition: all .2s;
 }
 
 .profile-img:hover  {

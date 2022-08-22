@@ -22,14 +22,14 @@
     line-height: 1;
     padding: .25rem .5rem;
     color: var(--orange);
-    background-color: var(--orange);
+    background-color: var(--pale-orange);
     border-radius: 4px;
 }
 
 .old-price {
     font-weight: 700;
     text-decoration: line-through;
-    color: var(--clr-gray-blue);
+    color: var(--grayish-blue);
 }
 
 .add-to-cart-wrapper {
@@ -47,5 +47,5 @@
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1;
-    background-color: var(--dark-grayish-blue);
+    background-color: var(--light-grayish-blue);
 }
