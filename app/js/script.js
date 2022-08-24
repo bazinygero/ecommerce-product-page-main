@@ -220,7 +220,6 @@ btnCloseNav.addEventListener('click', showHideNav);
 btnAddToCart.addEventListener('click', addToCart);
 quantitySelector.addEventListener('click', selectQuantity);
 btnCart.addEventListener('click', showCart);
-profileLink.addEventListener('click', showCart);
 productImageMain.addEventListener('click', lightboxPopup);
 arrowLeft.addEventListener('click', function() {
     lightboxArrowSlider(slideIndex -= 1);

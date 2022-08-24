@@ -8,7 +8,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid var(--dark-grayish-blue);
+        border-bottom: 1px solid var(--grayish-blue);
     }
 }
 
@@ -44,7 +44,7 @@ nav {
         display: block;
         padding: 3rem 0;
         max-height: 114px;
-        transition: all .1s;
+        transition: all .05s;
         color: var(--dark-grayish-blue);
     }
 
@@ -76,4 +76,5 @@ nav {
 
 .profile-img:hover  {
     border: 2px solid var(--orange);
+    transition: all .05s;
 }

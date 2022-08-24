@@ -15,7 +15,7 @@
 .product-image-main {
     height: 80vw;
     max-height: 640px;
-    width: 100%;
+    width: 100vw;
     object-fit: cover;
 }
 
@@ -63,8 +63,8 @@
     }
 
     .active {
-        border: 2px solid var(--orange);
-        opacity: .5;
+        border: 2px solid hsl(26, 100%, 55%, 2);
+        opacity: .25;   
     }
 }
 

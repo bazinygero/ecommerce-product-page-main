@@ -51,7 +51,7 @@ button {
     font-size: 1rem;
     font-weight: 700;
     border-radius: 12px;
-    box-shadow: 0px 5px 30px -10px rgba(255,125,26,0.84);
+    box-shadow: 0px 5px 30px -10px rgba(255, 119, 16, 0.857);
 }
 
 .lightbox-close-btn {
@@ -60,4 +60,9 @@ button {
     right: 0;
     font-size: 2rem;
     color: var(--white);
+}
+
+.lightbox-close-btn:hover {
+        color: var(--orange);
+        transition: all .05s;
 }

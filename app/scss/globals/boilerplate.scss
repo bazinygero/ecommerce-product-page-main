@@ -1,5 +1,9 @@
 @use '../util' as *;
 
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--font-main);
     font-size: 16px;

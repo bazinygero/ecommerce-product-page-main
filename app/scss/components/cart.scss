@@ -10,7 +10,7 @@
     width: min(360px, 96vw);
     z-index: 1;
     border-radius: 8px;
-    box-shadow: 0 15px 30px 5px rgba(144, 144, 144, 0.379);
+    box-shadow: 0 15px 30px 5px rgba(54, 54, 54, 0.379);
     display: none;
 }
 
@@ -36,4 +36,10 @@
     font-size: 1.125rem;
     margin-right: .35rem;
     color: var(--dark-grayish-blue);
+}
+
+@media (max-width: 390px) {
+    .cart {
+        max-width: 96vw;
+    }
 }
