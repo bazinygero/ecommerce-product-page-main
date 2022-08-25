@@ -1,4 +1,3 @@
-// Components
 const btnToggleNav = document.querySelector('.nav-open-btn');
 const btnCloseNav = document.querySelector('.nav-close-btn');
 const navMenu = document.querySelector('.desktop-nav');
@@ -16,7 +15,7 @@ const arrowRight = document.querySelector('.arrow-right');
 const thumbImages = document.querySelectorAll('.lightbox-thumbnails img');
 
 
-// Show/hide mobile navigation
+
 const showHideNav = () => {
     if(navMenu.classList.contains('mobile-nav')) {
         navMenu.classList.remove('mobile-nav');
@@ -29,9 +28,8 @@ const showHideNav = () => {
 
 const addToCart = () => {
     
-    clearCart(); // Clear previous content
+    clearCart();
 
-    // Create DOM
     const img = document.createElement('img');
     img.src = document.querySelector('.lightbox-thumbnails > a img').src;
     cartContent.appendChild(img);
@@ -39,12 +37,12 @@ const addToCart = () => {
     const divArticle = document.createElement('div');
     const title = document.createElement('span');
     title.classList.add('cart-article-title');
-    title.textContent = document.querySelector('h1').textContent; // Get the article title 
+    title.textContent = document.querySelector('h1').textContent;  
     divArticle.appendChild(title);
 
     const divPrice = document.createElement('div');
     const price = document.createElement('span');
-    price.textContent = document.querySelector('.price > span').textContent; // Get the price
+    price.textContent = document.querySelector('.price > span').textContent; 
     
     const quantitySpan = document.createElement('span');
     const quantity = document.querySelector('.number').textContent;
@@ -53,7 +51,7 @@ const addToCart = () => {
     const totalSpan = document.createElement('span');
     totalSpan.classList.add('cart-total');
 
-    const total = price.textContent.slice(1, 4) * quantity; // Calculate cart total
+    const total = price.textContent.slice(1, 4) * quantity; 
     totalSpan.textContent = "$" + total + ".00"
     
     divPrice.appendChild(price);
@@ -76,14 +74,14 @@ const addToCart = () => {
     cartContent.appendChild(divArticle);
     cartContent.appendChild(divButton);
 
-    quantityBadge.textContent = quantity; // Update quantity badge number
+    quantityBadge.textContent = quantity; 
     quantityBadge.style.display = "block";
 }
 
 const clearCart = (emptyAll) => {
     const btnCheckout = document.querySelector('.checkout-btn');
     
-    // Clear DOM and place empty cart message
+    
     if(emptyAll && confirm('Empty your cart?')) {
         while(cartContent.firstChild) {
             cartContent.removeChild(cartContent.firstChild);
@@ -94,7 +92,8 @@ const clearCart = (emptyAll) => {
         emptyMessage.textContent = "Your cart is empty";
         cartContent.appendChild(emptyMessage);
     }
-    // Clear previous cart content before adding new
+   
+
     if(!emptyAll) {
         while(cartContent.firstChild) {
             cartContent.removeChild(cartContent.firstChild);
@@ -127,7 +126,7 @@ const lightboxPopup = () => {
     const lightboxClone = lightbox.cloneNode(true)
     overlay.classList.add('overlay');
 
-    // Left arrow
+    
     const btnLeft = document.createElement('button');
     btnLeft.classList.add('arrow-left-popup');
     const btnLeftIcon = document.createElement('img');
@@ -136,7 +135,7 @@ const lightboxPopup = () => {
     btnLeft.addEventListener('click', function() {
         lightboxArrowSlider(slideIndex -= 1, true);
     })
-    // Right arrow
+    
     const btnRight = document.createElement('button');
     btnRight.classList.add('arrow-right-popup');
     const btnRightIcon = document.createElement('img');
@@ -145,7 +144,7 @@ const lightboxPopup = () => {
     btnRight.addEventListener('click', function() {
         lightboxArrowSlider(slideIndex += 1, true);
     })
-    // Close btn
+    
     const btnClose = document.createElement('button');
     btnClose.innerHTML = "&times;";
     btnClose.classList.add('lightbox-close-btn');
@@ -153,7 +152,7 @@ const lightboxPopup = () => {
     btnClose.addEventListener('click', function() {
         overlay.remove();
     });
-    // Add listener for thumb image slider
+    
     lightboxClone.querySelectorAll('.lightbox-thumbnails img').forEach(image => {
         image.addEventListener('click', function(e) {
             lightboxThumbSlider(e, true);
@@ -169,43 +168,43 @@ const lightboxPopup = () => {
 
 let slideIndex = 1;
 
-// Slide images by arrow
+
 const lightboxArrowSlider = (index, isPopup) => {
-    // Get the main and thumbnail images from popup slider
+    
     const overlayMainImg = document.querySelector('.overlay .product-image-main');
     const thumbImagesOverlay = document.querySelectorAll('.overlay .lightbox-thumbnails img');
-    // Loop over images
+    
     if(index < 1) slideIndex = 4;
     if(index > 4) slideIndex = 1;
 
-    // If control comes from popup slider
+    
     if(isPopup) {
-        // Get the source from thumb img, using current index from function call; trim img name
+        
         overlayMainImg.src = thumbImages[slideIndex - 1].src.slice(0, -14) + ".jpg"; 
-        // Remove active class from popup  slider only
+        
         document.querySelector('.overlay').querySelector('.active').classList.remove('active');
-        // Add active class on current image
+        
         thumbImagesOverlay[slideIndex - 1].classList.add('active');
     }
-    // If control comes from default page slider
+    
     if(!isPopup) {
         productImageMain.src = thumbImages[slideIndex - 1].src.slice(0, -14) + ".jpg";
     }
 }
 
 
-// Slide images by thumbnails (desktop only)
+
 const lightboxThumbSlider = (e, isPopup) => {
-    // Get the main image from popup slider
+    
     const overlayMainImg = document.querySelector('.overlay .product-image-main');
 
-    // If popup slider
+    
     if(isPopup)  {
         overlayMainImg.src = e.target.src.slice(0, -14) + ".jpg";
         document.querySelector('.overlay').querySelector('.active').classList.remove('active');
         e.target.classList.add('active');
     }
-    // If default page slider
+    
     if(!isPopup) {
         productImageMain.src = e.target.src.slice(0, -14) + ".jpg";
         document.querySelector('.active').classList.remove('active');
@@ -214,7 +213,7 @@ const lightboxThumbSlider = (e, isPopup) => {
 }
 
 
-// Listeners
+
 btnToggleNav.addEventListener('click', showHideNav);
 btnCloseNav.addEventListener('click', showHideNav);
 btnAddToCart.addEventListener('click', addToCart);
