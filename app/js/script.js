@@ -15,7 +15,7 @@ const arrowRight = document.querySelector('.arrow-right');
 const thumbImages = document.querySelectorAll('.lightbox-thumbnails img');
 
 
-
+// Show and hide for mobile navigation
 const showHideNav = () => {
     if(navMenu.classList.contains('mobile-nav')) {
         navMenu.classList.remove('mobile-nav');
@@ -26,6 +26,8 @@ const showHideNav = () => {
     }
 }
 
+
+// Add items to cart
 const addToCart = () => {
     
     clearCart();
@@ -78,6 +80,8 @@ const addToCart = () => {
     quantityBadge.style.display = "block";
 }
 
+
+// Clear cart items 
 const clearCart = (emptyAll) => {
     const btnCheckout = document.querySelector('.checkout-btn');
     
@@ -118,6 +122,8 @@ const selectQuantity = (e) => {
     if(e.target.classList.contains('minus') && quantityNumber.textContent > 1) quantityNumber.textContent--;
 }
 
+
+// Lightbox 
 const lightboxPopup = () => {
 
     const body = document.querySelector('body');
@@ -213,7 +219,7 @@ const lightboxThumbSlider = (e, isPopup) => {
 }
 
 
-
+// Event listeners
 btnToggleNav.addEventListener('click', showHideNav);
 btnCloseNav.addEventListener('click', showHideNav);
 btnAddToCart.addEventListener('click', addToCart);
